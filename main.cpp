@@ -10,20 +10,17 @@ DigitalOut led2(p25);
 
 int main() {
     while(1) {
-        if(button1 == 0) {
-            // Button 1 pressed, turn off LEDs and stop program
+        if(button1 == 0) {                     // Button 1 pressed, turn off LEDs and stop program
             led1 = 0;
             led2 = 0;
             break;
         }
-        else if(button2 == 0) {
-            // Button 2 pressed, alternate LEDs
+        else if(button2 == 0) {                // Button 2 pressed, alternate LEDs
             led1 = !led1;
             led2 = !led2;
             wait(0.5);
         }
-        else {
-            // Neither button pressed, turn on LEDs in alternating pattern
+        else {                                 // Neither button pressed, turn on LEDs in alternating pattern
             led1 = 1;
             led2 = 0;
             wait(0.5);
@@ -32,5 +29,4 @@ int main() {
             wait(0.5);
         }
     }
-    // End of program
 }
